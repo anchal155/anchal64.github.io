@@ -1,0 +1,30 @@
+<!-- nav -->
+<nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
+  <a href="#" class="navbar-brand">Login-app</a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+  <div class="navbar-nav ml-auto">
+      <a class="nav-item nav-link" routerLink="/">Home</a>
+      <a class="nav-item nav-link" routerLink="/admin" *ngIf="isAdmin">Admin</a>
+      <a class="nav-item nav-link" (click)="logout()">Logout</a>
+  </div>
+</nav>
+
+<!-- main app container -->
+<div class="jumbotron">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-6 offset-md-3">
+              <router-outlet></router-outlet>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- credits -->
+<div class="footer">
+ <p>
+   copyright reserved contact us @+91-9769611414
+ </p>
+</div>
